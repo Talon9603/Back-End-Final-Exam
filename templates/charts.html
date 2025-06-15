@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Analytics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Employees per Department</h2>
+    <canvas id="deptPieChart" width="400" height="200"></canvas>
+
+    <h2>Monthly Attendance Overview</h2>
+    <canvas id="attendanceBarChart" width="400" height="200"></canvas>
+
+    <script>
+        const deptData = {{ dept_data|safe }};
+        const attendanceData = {{ attendance_data|safe }};
+
+        new Chart(document.getElementById('deptPieChart'), {
+            type: 'pie',
+            data: {
+                labels: deptData.labels,
+                datasets: [{
+                    data: deptData.data,
+                    backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff']
+                }]
+            }
+        });
+
+        new Chart(document.getElementById('attendanceBarChart'), {
+            type: 'bar',
+            data: {
+                labels: attendanceData.labels,
+                datasets: [{
+                    label: 'Total Present Days',
+                    data: attendanceData.data,
+                    backgroundColor: '#36a2eb'
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
