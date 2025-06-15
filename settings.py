@@ -17,3 +17,11 @@ DATABASES = {
         'PORT': env('DB_PORT', default='5432'),
     }
 }
+
+
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    'rest_framework.authtoken',
+    'django_filters',
+]
