@@ -42,6 +42,3 @@ Available at: /swagger/
 - Auto-generated from viewsets
 - Supports Try-it-out for requests
 - Includes schema info, models, fields, and descriptions
-
-
-## API Usage Guide
