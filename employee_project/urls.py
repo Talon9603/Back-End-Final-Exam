@@ -12,6 +12,8 @@ from drf_yasg import openapi
 
 from employees.views import chart_view
 
+from django.shortcuts import redirect
+
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
