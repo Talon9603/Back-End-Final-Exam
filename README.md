@@ -1,7 +1,4 @@
-# Back-End-Final-Exam
-**Base URL:** https://back-end-final-exam.onrender.com/
-
-# Employment Management System
+# Back-End Final Exam: Employment Management System
 A backend-driven Employee Management System built with Django, Django REST Framework, and PostgreSQL. This project exposes API endpoints for managing employees, departments, attendance, and performance data. It also includes authentication, filtering, pagination, and optional chart visualizations.
 
 ## Features
